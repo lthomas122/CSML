@@ -1,18 +1,71 @@
-<div class="jumbotron text-center">
-  <h1>CSML</h1>
-  <p>A Customisable CSS Library for Beginners</p>
-</div>
-<div class="container">
-  <div class="col-xs-12 text-center">
-    <h2>Let's Begin...</h2>
-    <p>CSML makes it easy for beginners to style their HTML. All you have to do is choose the colours you wish to use for your project by filling out the simple form below.  CSML will work it's magic and generate a custom stylesheet that you can use.</p>
-  </div>
-</div>
-<div class="container">
-  <div class="col-xs-12 text-center">
-    <h2>How Do I Use It?</h2>
-    <p>Using CSML is really simple.  Just write your HTML then simply add your custom styling attributes to your HTML elements and your styling will be applied.</p>
-    <h3>Styling Text</h3>
-    <pre><code class="html"><p blue>Make Me Blue</p></code></pre>
-  </div>
-</div>
+<head>
+    <link rel="stylesheet" href="railscasts.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="highlight.pack.js"></script>
+    <script src="jscolor.min.js"></script>
+    <script src="main.js"></script>
+    <style>
+    .container.styleFormArea {
+      margin: 15px auto;
+    }
+    .container.styleFormArea >.row > div {
+      padding: 20px;
+      text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1>CSML</h1>
+        <p>A Customisable CSS Library for Beginners</p>
+    </div>
+    <div class="container">
+        <div class="col-xs-12 text-center">
+            <h2>Let's Begin...</h2>
+            <p>CSML makes it easy for beginners to style their HTML. All you have to do is choose the colours you wish to use for your project by filling out the simple form below. CSML will work it's magic and generate a custom stylesheet that you can use.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-xs-12 text-center">
+            <h2>How Do I Use It?</h2>
+            <p>Using CSML is really simple. Just write your HTML then simply add your custom styling attributes to your HTML elements and your styling will be applied.</p>
+            <h3>Styling Text</h3>
+            <pre><code class="html"><p blue>Make Me Blue</p></code></pre> Color: <input class="jscolor" value="000000">
+        </div>
+    </div>
+    <div class="container styleFormArea">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+              <h2>Text Styles</h2>
+              <p>Use the textboxes below to define the colours you wish to use:-</p>
+              <form action="">
+                  <fieldset class="color-panels-txt">
+                    <div>Color Name: <input type="text" class="colorname" value="Dark"></div>
+                    <div>Color Hex: <input type="text" class="jscolor" value="222222"></div>
+
+                  </fieldset>
+                  <fieldset>
+                    <button onclick="addColorPanel('txt')">Add More Colors</button>
+                  </fieldset>
+              </form>
+          </div>
+          <div class="col-xs-12 col-md-6" style="background:#eaeaea">
+              <h2>Background Styles</h2>
+              <p>Use the textboxes below to define the background colours you wish to use:-</p>
+              <form action="">
+                <fieldset class="color-panels-bg">
+                  <div>Color Name: <input type="text" class="colorname" value="blue"></div>
+                  <div>Color Hex: <input type="text" class="jscolor" value="2b4591"></div>
+
+                </fieldset>
+                <fieldset>
+                  <button onclick="addColorPanel('bg')">Add More Colors</button>
+                </fieldset>
+              </form>
+          </div>
+        </div>
+    </div>
+
+</body>
